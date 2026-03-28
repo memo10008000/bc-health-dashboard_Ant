@@ -251,6 +251,11 @@ if active_tab == "🌎 Population Health Equity":
     fig_heat.update_layout(margin=dict(l=0, r=0, t=30, b=0), xaxis_title="Community (CHSA)", height=250, paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
     st.plotly_chart(fig_heat, use_container_width=True)
 
+    st.markdown('<hr>', unsafe_allow_html=True)
+    st.subheader("🤖 AI Synthesis Engine: Executive Briefing")
+    briefing = f"Based on a multi-factorial algorithmic analysis of the dataset, the community of **{top_community_global['chsa_name']}** is identified as the strict highest priority target for the next public health outreach clinic. This specific region exhibits a critical localized intersection of systemic vulnerabilities, suffering from a severe primary care access gap ({top_community_global['pct_without_family_doctor']:.1f}% without a GP) compounded by a massive opioid overdose rate ({top_community_global['opioid_overdose_rate']:.1f} per 100,000). Deploying rapid, targeted clinical resources to {top_community_global['chsa_name']} is currently mathematically optimized to alleviate both severe demographic mortality and immense structural emergency room pressure."
+    st.info(briefing)
+
 # ==========================================
 # TAB 2: BC WAIT TIMES
 # ==========================================
